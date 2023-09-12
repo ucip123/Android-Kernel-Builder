@@ -1,1 +1,89 @@
-
+[
+  {
+    "kernelSource": {
+      "name": "liquwid-KernelSU-Proton-release",
+      "repo": "https://github.com/ucip123/liquid_kernel_realme_even",
+      "branch": "OSS-RUI2-NO-KSU",
+      "device": "even",
+      "defconfig": "even_kvm_defconfig"
+    },
+    "withKernelSU": true,
+    "toolchains": [
+      {
+        "repo": "https://github.com/kdrag0n/proton-clang",
+        "branch": "master",
+        "name": "proton-clang",
+        "binPath": ["bin"]
+      }
+    ],
+    "ccache":false,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "proton-clang/bin/clang",
+      "externalCommand": {
+        "CROSS_COMPILE": "proton-clang/bin/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "proton-clang/bin/arm-linux-gnueabi-",
+        "LD": "proton-clang/bin/ld.lld",
+        "AR": "proton-clang/bin/llvm-ar",
+        "NM": "proton-clang/bin/llvm-nm",
+        "OBJCOPY": "proton-clang/bin/llvm-objcopy",
+        "OBJDUMP": "proton-clang/bin/llvm-objdump",
+        "READELF": "proton-clang/bin/llvm-readelf",
+        "OBJSIZE": "proton-clang/bin/llvm-size",
+        "STRIP": "proton-clang/bin/llvm-strip",
+        "LDGOLD": "proton-clang/bin/aarch64-linux-gnu-ld.gold",
+        "LLVM_AR": "proton-clang/bin/llvm-ar",
+        "LLVM_DIS": "proton-clang/bin/llvm-dis"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/ucip123/AnyKernel3",
+      "branch": "master"
+    }
+  },
+  {
+    "kernelSource": {
+      "name": "liquwid-KernelSU-gatau-clang-apa-release",
+      "repo": "https://github.com/ucip123/liquid_kernel_realme_even",
+      "branch": "OSS-RUI2-NO-KSU",
+      "device": "even",
+      "defconfig": "even_kvm_defconfig"
+    },
+    "withKernelSU": true,
+    "toolchains": [
+      {
+        "repo": "https://github.com/TwistedPrime/twisted-clang",
+        "branch": "master",
+        "name": "twisted-clang",
+        "binPath": ["bin"]
+      }
+    ],
+    "ccache":false,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "twisted-clang/bin/clang",
+      "externalCommand": {
+        "CROSS_COMPILE": "twisted-clang/bin/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "twisted-clang/bin/arm-linux-gnueabi-",
+        "LD": "twisted-clang/bin/ld.lld",
+        "AR": "twisted-clang/bin/llvm-ar",
+        "NM": "twisted-clang/bin/llvm-nm",
+        "OBJCOPY": "twisted-clang/bin/llvm-objcopy",
+        "OBJDUMP": "twisted-clang/bin/llvm-objdump",
+        "READELF": "twisted-clang/bin/llvm-readelf",
+        "OBJSIZE": "twisted-clang/bin/llvm-size",
+        "STRIP": "twisted-clang/bin/llvm-strip",
+        "LDGOLD": "twisted-clang/bin/aarch64-linux-gnu-ld.gold",
+        "LLVM_AR": "twisted-clang/bin/llvm-ar",
+        "LLVM_DIS": "twisted-clang/bin/llvm-dis"
+      }
+    },
+    "AnyKernel3": {
+      "use": false,
+      "release": true,
+      "repo": "https://github.com/ucip123/AnyKernel3",
+      "branch": "master"
+    }
+  }
